@@ -11,20 +11,15 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // Add event listener to capture key presses
     document.addEventListener('keydown', this.handleKeyPress);
   }
 
   componentWillUnmount() {
-    // Remove event listener when component is unmounted
     document.removeEventListener('keydown', this.handleKeyPress);
   }
 
   handleKeyPress = (e) => {
-    // Get the pressed key
     const key = e.key;
-
-    // Define a mapping of key values to calculator button values
     const keyMapping = {
       '0': '0', '1': '1', '2': '2', '3': '3', '4': '4',
       '5': '5', '6': '6', '7': '7', '8': '8', '9': '9',
