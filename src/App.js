@@ -27,7 +27,6 @@ class App extends Component {
       Enter: '=', '=': '=', Backspace: '⌫', Escape: 'C',
     };
 
-    // Check if the pressed key is in the mapping
     if (keyMapping[key] !== undefined) {
       this.handleButtonClick(keyMapping[key]);
     }
@@ -42,7 +41,7 @@ class App extends Component {
       }
     } else if (value === 'C') {
       this.setState({ input: "", result: "" });
-    } else if (value === '⌫') { // Backspace button
+    } else if (value === '⌫') {
       this.setState({ input: this.state.input.slice(0, -1) });
     } else {
       this.setState({ input: this.state.input + value });
