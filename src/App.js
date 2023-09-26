@@ -1,49 +1,82 @@
-import React, { Component } from 'react';
 import './App.css';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      input: "",
-      result: ""
-    };
-  }
-
-  
-  render() {
-    return (
-      <div className="calculator">
-        <div className="header">
-          <h2>Welcome to My Calculator App</h2>
-        </div>
-        <div className="display">
-          <input type="text" value={this.state.input} readOnly />
-          <div className="result">{this.state.result}</div>
-        </div>
-        <div className="buttons">
-          <button onClick={() => this.handleButtonClick('7')}>7</button>
-          <button onClick={() => this.handleButtonClick('8')}>8</button>
-          <button onClick={() => this.handleButtonClick('9')}>9</button>
-          <button onClick={() => this.handleButtonClick('+')}>+</button>
-          <button onClick={() => this.handleButtonClick('4')}>4</button>
-          <button onClick={() => this.handleButtonClick('5')}>5</button>
-          <button onClick={() => this.handleButtonClick('6')}>6</button>
-          <button onClick={() => this.handleButtonClick('-')}>-</button>
-          <button onClick={() => this.handleButtonClick('1')}>1</button>
-          <button onClick={() => this.handleButtonClick('2')}>2</button>
-          <button onClick={() => this.handleButtonClick('3')}>3</button>
-          <button onClick={() => this.handleButtonClick('*')}>*</button>
-          <button onClick={() => this.handleButtonClick('C')}>C</button>
-          <button onClick={() => this.handleButtonClick('0')}>0</button>
-          <button onClick={() => this.handleButtonClick('=')}>=</button>
-          <button onClick={() => this.handleButtonClick('/')}>/</button>
-          <button onClick={() => this.handleButtonClick('⌫')}>⌫</button>
-          <button onClick={() => this.handleButtonClick('00')}>00</button>
-        </div>
-      </div>
-    );
-  }
+function MyButton({label, onClick}) {
+  return (
+    <button className="CalcButton" onClick ={onClick}>
+      {label}
+    </button>
+  );
 }
 
-export default App;
+function Display({display}) {
+  return (
+    <div className="CalcDisplay">
+      {display}
+    </div>    
+  );
+}
+
+export default function App() {
+
+  const numberClickHandler = (e) => {
+    e.preventDefault();
+    const value = e.target.innerHTML;
+
+    console.log(value);
+    alert(value);
+
+  }
+
+  const operatorClickHandler = (e) => {
+    e.preventDefault();
+    const value = e.target.innerHTML;
+
+    console.log(value);
+    alert(value);
+
+  }
+
+  const equalClickHandler = (e) => {
+    e.preventDefault();
+    const value = e.target.innerHTML;
+
+    console.log(value);
+    alert(value);
+
+  }
+
+  const clearClickHandler = (e) => {
+    e.preventDefault();
+    const value = e.target.innerHTML;
+
+    console.log(value);
+    alert(value);
+
+  }
+
+
+  return (
+    <div className="App">
+      <h1>Welcome to my app</h1>
+      <Display display={0} />
+      <div className="ButtonContainer">
+        <MyButton label={7} onClick={numberClickHandler}/>
+        <MyButton label={8} onClick={numberClickHandler}/>
+        <MyButton label={9} onClick={numberClickHandler}/>
+        <MyButton label={"+"} onClick={operatorClickHandler}/>
+        <MyButton label={4} onClick={numberClickHandler}/>
+        <MyButton label={5} onClick={numberClickHandler}/>
+        <MyButton label={6} onClick={numberClickHandler}/>
+        <MyButton label={"-"} onClick={operatorClickHandler}/>
+        <MyButton label={1} onClick={numberClickHandler}/>
+        <MyButton label={2} onClick={numberClickHandler}/>
+        <MyButton label={3} onClick={numberClickHandler}/>
+        <MyButton label={"*"} onClick={operatorClickHandler}/>
+        <MyButton label={"C"} onClick={clearClickHandler}/>
+        <MyButton label={0} onClick={numberClickHandler}/>
+        <MyButton label={"="} onClick={equalClickHandler}/>
+        <MyButton label={"÷"} onClick={operatorClickHandler}/>
+      </div>
+    </div>
+  );
+}
