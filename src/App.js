@@ -1,54 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      input: "",
-      result: ""
-    };
-  }
 
-  componentDidMount() {
-    document.addEventListener('keydown', this.handleKeyPress);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.handleKeyPress);
-  }
-
-  handleKeyPress = (e) => {
-    const key = e.key;
-    const keyMapping = {
-      '0': '0', '1': '1', '2': '2', '3': '3', '4': '4',
-      '5': '5', '6': '6', '7': '7', '8': '8', '9': '9',
-      '+': '+', '-': '-', '*': '*', '/': '/',
-      Enter: '=', '=': '=', Backspace: '⌫', Escape: 'C',
-    };
-
-    if (keyMapping[key] !== undefined) {
-      this.handleButtonClick(keyMapping[key]);
-    }
-  };
-
-  handleButtonClick = (value) => {
-    if (value === '=') {
-      try {
-        this.setState({ result: eval(this.state.input) });
-      } catch (error) {
-        this.setState({ result: "Error" });
-      }
-    } else if (value === 'C') {
-      this.setState({ input: "", result: "" });
-    } else if (value === '⌫') {
-      this.setState({ input: this.state.input.slice(0, -1) });
-    } else {
-      this.setState({ input: this.state.input + value });
-    }
-  };
-
-  
   render() {
     return (
       <div className="calculator">
@@ -82,6 +35,5 @@ class App extends Component {
       </div>
     );
   }
-}
 
 export default App;
