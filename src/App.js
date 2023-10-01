@@ -58,6 +58,8 @@ class App extends Component {
           <button onClick={() => this.handleClick('/')}>/</button>
         </div>
       </div>
+  </div>
+
     );
   }
 }
