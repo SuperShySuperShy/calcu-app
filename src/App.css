@@ -7,11 +7,14 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.calculator h2 {
+.header {
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
   font-size: 24px;
   color: #333;
-  margin-bottom: 20px;
 }
 
 .display {
@@ -28,6 +31,7 @@ input[type="text"] {
   outline: none;
 }
 
+/* Result area */
 .result {
   font-size: 36px;
   color: #333;
@@ -43,7 +47,7 @@ button {
   font-size: 24px;
   padding: 15px;
   border: none;
-  background-color: #3498db; 
+  background-color: #3498db;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -51,15 +55,34 @@ button {
 }
 
 button:hover {
-  background-color: #2980b9; 
+  background-color: #2980b9;
 }
 
+/* Clear button */
 button[value="C"] {
-  background-color: #e74c3c; 
+  background-color: #e74c3c;
 }
 
+/* Equals button */
 button[value="="] {
-  background-color: #2ecc71; 
+  background-color: #2ecc71;
+}
+
+/* GUANLAO button */
+.buttons:last-child button {
+  font-size: 24px;
+  padding: 15px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.buttons:last-child button:hover {
+  background-color: #2980b9; 
 }
 
 @media screen and (max-width: 768px) {
@@ -72,22 +95,6 @@ button[value="="] {
     font-size: 18px;
     padding: 10px;
   }
-  
-.buttons:last-child button {
-  font-size: 24px;
-  padding: 15px;
-  border: none;
-  background-color: #3498db; 
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 100%;
-}
-
-.buttons:last-child button:hover {
-  background-color: #2980b9;
-}
 
   input[type="text"] {
     font-size: 20px;
