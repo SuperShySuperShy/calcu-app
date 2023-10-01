@@ -25,7 +25,15 @@ class App extends Component {
   };
 
   render() {
-    return (
+  return (
+    <div className="calculator">
+      <div className="header">
+        <h2>Alsonn Joseph C. Guanlao CPE 3A</h2>
+      </div>
+      <div className="display">
+        <input type="text" value={this.state.input} readOnly />
+        <div className="result">{this.state.result}</div>
+      </div>
       <div className="calculator">
         <div className="display">
           <input type="text" value={this.state.input} readOnly />
