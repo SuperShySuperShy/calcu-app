@@ -24,6 +24,10 @@ class App extends Component {
     }
   };
 
+  handleSurnameClick = () => {
+    this.setState({ input: "ALSONN JOSEPH GUANLAO" });
+  };
+
   render() {
     return (
       <div className="calculator">
@@ -52,9 +56,16 @@ class App extends Component {
           <button onClick={() => this.handleClick('=')}>=</button>
           <button onClick={() => this.handleClick('/')}>/</button>
         </div>
+        <div className="buttons">
+          <button onClick={() => this.handleSurnameClick()}>GUANLAO</button>
+        </div>
       </div>
     );
   }
+}
+
+export default App;
+
 }
 
 export default App;
