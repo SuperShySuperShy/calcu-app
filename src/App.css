@@ -1,20 +1,10 @@
 .calculator {
-  width: 400px;
+  width: 300px;
   margin: 0 auto;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.header h2 {
-  font-size: 24px;
-  color: #333;
 }
 
 .display {
@@ -52,5 +42,3 @@ button {
 button:hover {
   background-color: #ccc;
 }
-
-
