@@ -1,40 +1,38 @@
+/* App.css */
+
 .calculator {
-  width: 320px;
+  max-width: 400px;
   margin: 0 auto;
-  background-color: #f8f8f8;
-  border-radius: 10px;
   padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.header h2 {
   font-size: 24px;
-  color: #333;
+  margin-bottom: 20px;
 }
 
 .display {
-  text-align: right;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
   margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 input[type="text"] {
   width: 100%;
-  padding: 10px;
-  font-size: 24px;
   border: none;
-  border-bottom: 2px solid #3498db;
   outline: none;
+  font-size: 20px;
 }
 
-/* Result area */
 .result {
-  font-size: 36px;
-  color: #333;
+  font-size: 24px;
+  margin-top: 10px;
 }
 
 .buttons {
@@ -44,63 +42,24 @@ input[type="text"] {
 }
 
 button {
-  font-size: 24px;
-  padding: 15px;
+  padding: 10px;
+  font-size: 20px;
   border: none;
-  background-color: #3498db;
-  color: white;
   border-radius: 5px;
   cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: #45a049;
 }
 
-/* Clear button */
-button[value="C"] {
-  background-color: #e74c3c;
+.buttons button:last-child {
+  grid-column: span 2;
 }
 
-/* Equals button */
-button[value="="] {
-  background-color: #2ecc71;
-}
-
-/* GUANLAO button */
-.buttons:last-child button {
-  font-size: 24px;
-  padding: 15px;
-  border: none;
-  background-color: #3498db;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 100%;
-}
-
-.buttons:last-child button:hover {
-  background-color: #2980b9; 
-}
-
-@media screen and (max-width: 768px) {
-  .calculator {
-    width: 100%;
-    border-radius: 0;
-  }
-
-  button {
-    font-size: 18px;
-    padding: 10px;
-  }
-
-  input[type="text"] {
-    font-size: 20px;
-  }
-
-  .result {
-    font-size: 28px;
-  }
+.buttons button:nth-last-child(2) {
+  grid-column: span 2;
 }
