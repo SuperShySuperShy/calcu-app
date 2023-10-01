@@ -72,6 +72,22 @@ button[value="="] {
     font-size: 18px;
     padding: 10px;
   }
+  
+.buttons:last-child button {
+  font-size: 24px;
+  padding: 15px;
+  border: none;
+  background-color: #3498db; 
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.buttons:last-child button:hover {
+  background-color: #2980b9;
+}
 
   input[type="text"] {
     font-size: 20px;
