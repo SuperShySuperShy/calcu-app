@@ -2,38 +2,41 @@
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  background-color: #f0f0f0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #333;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .header {
-  text-align: center;
-  margin-bottom: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 10px 10px 0 0;
 }
 
 .header h2 {
-  font-size: 20px;
+  font-size: 24px;
   margin: 0;
 }
 
 .display {
   text-align: right;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .display input[type="text"] {
   width: 100%;
   padding: 10px;
-  font-size: 20px;
+  font-size: 24px;
   border: none;
   border-bottom: 2px solid #333;
   outline: none;
 }
 
 .result {
-  font-size: 24px;
+  font-size: 36px;
   margin-top: 10px;
 }
 
@@ -43,43 +46,28 @@
   gap: 10px;
 }
 
-.button-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
-
-button {
-  font-size: 20px;
-  padding: 10px;
+.button {
+  font-size: 24px;
+  padding: 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50%;
   cursor: pointer;
   background-color: #333;
   color: #fff;
   transition: background-color 0.3s ease;
 }
 
-/* Styles for the GUANLAO button */
-.button-row:last-child {
-  grid-template-columns: 1fr;
-}
-
-.button-row:last-child button {
-  grid-column: span 4;
-  background-color: #f00;
-}
-
-.buttons button:hover {
+.button:hover {
   background-color: #555;
 }
 
-.button-row:nth-child(4) button:first-child,
-.button-row:nth-child(4) button:last-child {
+.buttons button:nth-child(13),
+.buttons button:nth-child(16) {
   grid-column: span 2;
   background-color: #f00;
 }
 
-.button-row:nth-child(4) button:last-child {
-  background-color: #333;
+.buttons button:last-child {
+  grid-column: span 4;
+  background-color: #f00;
 }
