@@ -32,13 +32,16 @@ class App extends Component {
     return (
       <div className="calculator">
         <div className="header">
-          <h2>Alsonn Joseph C. Guanlao CPE 3A</h2>
+          <h2>Calculator</h2>
         </div>
         <div className="display">
           <input type="text" value={this.state.input} readOnly />
           <div className="result">{this.state.result}</div>
         </div>
         <div className="buttons">
+          <div className="button-row">
+            <button onClick={() => this.handleSurnameClick()}>GUANLAO</button>
+          </div>
           <div className="button-row">
             <button onClick={() => this.handleClick('7')}>7</button>
             <button onClick={() => this.handleClick('8')}>8</button>
@@ -62,7 +65,6 @@ class App extends Component {
             <button onClick={() => this.handleClick('0')}>0</button>
             <button onClick={() => this.handleClick('=')}>=</button>
             <button onClick={() => this.handleClick('/')}>/</button>
-            <button onClick={() => this.handleSurnameClick()}>GUANLAO</button>
           </div>
         </div>
       </div>
