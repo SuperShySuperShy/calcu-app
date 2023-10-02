@@ -1,12 +1,11 @@
 .calculator {
-  max-width: 300px;
+  max-width: 400px;
   margin: 0 auto;
   padding: 20px;
   border: 2px solid #ccc;
   border-radius: 5px;
   background-color: #f0f0f0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  font-family: Arial, sans-serif;
 }
 
 .header {
@@ -31,13 +30,11 @@
   border: none;
   border-bottom: 2px solid #333;
   outline: none;
-  text-align: right;
 }
 
 .result {
   font-size: 24px;
   margin-top: 10px;
-  text-align: right;
 }
 
 .buttons {
@@ -63,7 +60,17 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+/* Styles for the GUANLAO button */
+.button-row:last-child {
+  grid-template-columns: 1fr;
+}
+
+.button-row:last-child button {
+  grid-column: span 4;
+  background-color: #f00;
+}
+
+.buttons button:hover {
   background-color: #555;
 }
 
@@ -75,9 +82,4 @@ button:hover {
 
 .button-row:nth-child(4) button:last-child {
   background-color: #333;
-}
-
-.button-row:last-child button {
-  grid-column: span 4;
-  background-color: #f00;
 }
