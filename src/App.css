@@ -43,6 +43,12 @@
   gap: 10px;
 }
 
+.button-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
 button {
   font-size: 20px;
   padding: 10px;
@@ -54,15 +60,26 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+.button-row:last-child {
+  grid-template-columns: 1fr;
+}
+
+.button-row:last-child button {
+  grid-column: span 4;
+  background-color: #f00;
+}
+
+.buttons button:hover {
   background-color: #555;
 }
 
-.buttons button:last-child {
-  grid-column: span 2;
-}
-
-.buttons button:nth-child(13) {
+.button-row:nth-child(4) button:first-child,
+.button-row:nth-child(4) button:last-child {
   grid-column: span 2;
   background-color: #f00;
 }
+
+.button-row:nth-child(4) button:last-child {
+  background-color: #333;
+}
+
