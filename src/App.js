@@ -40,9 +40,6 @@ class App extends Component {
         </div>
         <div className="buttons">
           <div className="button-row">
-            <button onClick={() => this.handleSurnameClick()}>GUANLAO</button>
-          </div>
-          <div className="button-row">
             <button onClick={() => this.handleClick('7')}>7</button>
             <button onClick={() => this.handleClick('8')}>8</button>
             <button onClick={() => this.handleClick('9')}>9</button>
@@ -61,10 +58,11 @@ class App extends Component {
             <button onClick={() => this.handleClick('*')}>*</button>
           </div>
           <div className="button-row">
-            <button onClick={() => this.handleClick('C')}>C</button>
             <button onClick={() => this.handleClick('0')}>0</button>
             <button onClick={() => this.handleClick('=')}>=</button>
             <button onClick={() => this.handleClick('/')}>/</button>
+            <button onClick={() => this.handleClick('C')}>C</button>
+            <button onClick={() => this.handleSurnameClick()}>GUANLAO</button>
           </div>
         </div>
       </div>
