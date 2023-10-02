@@ -65,7 +65,7 @@ button {
 }
 
 .button-row:last-child button {
-  grid-column: span 4;
+  grid-column: span 5;
   background-color: #f00;
 }
 
@@ -82,4 +82,3 @@ button {
 .button-row:nth-child(4) button:last-child {
   background-color: #333;
 }
-
