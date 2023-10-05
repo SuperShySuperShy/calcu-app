@@ -61,12 +61,6 @@
   background-color: #555;
 }
 
-.buttons button:nth-child(13),
-.buttons button:nth-child(16) {
-  grid-column: span 2;
-  background-color: #f00;
-}
-
 .buttons button:last-child {
   grid-column: span 4;
   background-color: #f00;
