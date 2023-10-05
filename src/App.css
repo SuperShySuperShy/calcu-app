@@ -61,7 +61,3 @@
   background-color: #555;
 }
 
-.buttons button:last-child {
-  grid-column: span 4;
-  background-color: #f00;
-}
